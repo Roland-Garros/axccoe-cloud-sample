@@ -1,19 +1,24 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: cloud-sample 
+  name: cloud-sample
+  #name: cloudsample 
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cloud-sample
+    app: cloud-sample
+    #app: cloudsample
   template:
     metadata:
       labels:
-        app: cloud-sample 
+        app: cloud-sample
+        #app: cloudsample
     spec:
       containers:
-        - name: cloud-sample 
+        - name: cloud-sample
+        #- name: cloudsample 
           image: cepgstapacr.azurecr.io/cloud-sample
+          #image: cepgstapacr.azurecr.io/cloudsample
           ports:
           - containerPort: 8080

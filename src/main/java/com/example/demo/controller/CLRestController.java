@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-//@RequestMapping("/sampleapp1-82268862.cepg-aa.kubepia.net")
-@RequestMapping("/api/v1")
+//@RequestMapping("cloudsample-82268862.cepg-aa.kubepia.net")
+@RequestMapping("/")
 @RestController
 public class CLRestController {
 	
-	@GetMapping(value = "/user")
+	@GetMapping(value = "/api/v1/user")
 	public ResponseEntity<String> getUserIdNum() {
 		try {
 			return new ResponseEntity<String>("82268862", HttpStatus.OK);
